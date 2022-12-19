@@ -70,3 +70,51 @@ $(document).ready(function(){
 	// 	}, 1000);
 	// }
 });
+
+
+function validate(){
+	let name = document.querySelector('.name');
+	let email = document.querySelector('.email');
+	let message = document.querySelector('.message');
+	let send_btn = document.querySelector('.send_btn');
+	
+	send_btn.addEventListener('click', (e) => {
+		e.preventDefault();
+		if(name.value == "" || email.value == "" || message.value == ""){
+			emptyerror();
+		}
+		else{
+			sendmail (name.value, email.value, message.value);
+			success();
+			name.value = "";
+			email.value = "";
+			message.value = "";
+		}
+	})
+}
+
+validate();
+function emptyerror(){
+	swal({
+		title: "error!",
+		text: "Field cannot be empty!",
+		icon: "error",
+		button: "Ok",
+	  });
+}
+
+function sendmail(name, email, message){
+	emailjs.send("service_atw29le","template_ljqmdwp",{
+		to_name: name,
+		from_name: email,
+		message: message,
+		});
+}
+function success(){
+	swal({
+		title: "Email Sent Successfully!",
+		text: "We Try To Reply in 24 hours",
+		icon: "success",
+		button: "Ok",
+	  });
+}
