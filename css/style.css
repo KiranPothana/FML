@@ -466,6 +466,59 @@ body{
 
 /* CONTACT */
 
+.contact_form{
+    max-width: 300px;
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    margin-block-end: 25px;
+}
+.contact_title{
+    font-size: 1.46rem;
+    text-transform: uppercase;
+    font-family: var(--body-font);
+    font-weight: 700;
+    margin-block-end: 25px;
+}
+
+.contact_field{
+    margin-block-end: 10px;
+    background-color: var(--body-color);
+    border-radius: 20px;
+    padding: 14px 17px;
+    font-size: .75rem;
+    font-family: var(--ibm-font);
+    box-shadow: var(--shadow-1);
+}
+
+.contact_form textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.contact_button_submit{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    border-radius: 20px;
+    background-color: var(--title-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: var(--ibm-font);
+    transition: var(--transition);
+    color: var(--body-color);
+    font-size: .85rem;
+    box-shadow: var(--shadow-1);
+}
+.contact_button_submit:hover{
+    background-color: #000;
+}
 .contact_text{
     margin-block-end: 13px;
     font-size: 24px;
@@ -501,6 +554,7 @@ body{
     text-decoration: underline;
 }
 
+
 @media screen and (max-width: 424px) {
      :root{
         --big-font-size: 9.5rem;
@@ -510,6 +564,8 @@ body{
         font-size: 1.8rem;
      }
 }
+
+
 @media screen and (min-width: 567px){
     .welcome{
         padding-block: 1rem 5rem;
@@ -522,6 +578,11 @@ body{
         font-size: 3.8rem;
     }
 }
+
+
+
+
+
 @media screen and (min-width: 768px) {
     :root{
         --big-font-size: 18rem;
@@ -643,6 +704,10 @@ body{
         visibility: visible;
     }
 
+    /* CONTACT */
+    .contact_form{
+        max-width: 420px;
+    }
     /* footer */
     .footer .container{
         display: flex;
