@@ -472,6 +472,16 @@
 
         <section class="section contact" id="contact">
            <div class="container">
+              
+               <form action="" class="contact_form">
+                   <h3 class="contact_title">send us a message</h3>
+                   
+                   <input type="text" required placeholder="//Full Name" class="name contact_field">
+                   <input type="email" required placeholder="//Email" class="email contact_field">
+                   <textarea name="" required id="" placeholder="//Your Message" cols="30" rows="10" class="message contact_field"></textarea>
+                   
+                   <button type="submit" class="send_btn contact_button_submit"> <i class="fa-regular fa-paper-plane"></i> send</button>
+               </form>
                <p class="contact_text">
                    We are considering all proposals that may potentially be of interest to us.
                </p>
@@ -501,6 +511,15 @@
             <p class="copyright">Powered By <a href="#" class="copyright_link">FML TEAM</a></p>
         </div>
      </footer>
+     
+     <script src="https://kit.fontawesome.com/dbfca54b0d.js" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script type="text/javascript">
+         (function() {
+             emailjs.init('acYR2JGqTvfp4lasL');
+            })();
+    </script>
      <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
